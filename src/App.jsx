@@ -14,10 +14,15 @@ function App() {
 							}}
 							size={16}
 						/>
+						<ul className="navbar-list">
+							<li>TaskLister</li>
+						</ul>
 					</div>
-					<ul className="navbar-list">
-						<li>TaskLister</li>
-					</ul>
+				</div>
+				<div className="todos-container">
+					<div className="todo-item-container">
+						<p>item 1</p>
+					</div>
 				</div>
 			</main>
 		</>
