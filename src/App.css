@@ -49,6 +49,7 @@ main {
   background-color: #F8F0E5;
   border-radius: 10px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .todo-item-container-content {
@@ -60,4 +61,12 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.todo-item-container-content-text {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-left: 5px;
+  margin-bottom: 1px;
 }

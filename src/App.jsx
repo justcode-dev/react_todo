@@ -25,7 +25,9 @@ function App() {
 					<div className="todo-item-container">
 						<div className="todo-item-container-content">
 							<input type="checkbox" />
-							<p>item 1</p>
+							<div className='todo-item-container-content-text'>
+								<p>Do something</p>
+							</div>
 						</div>
 						<div className="todo-item-container-action">
 							<EditIcon
