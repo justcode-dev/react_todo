@@ -1,5 +1,7 @@
 import './App.css';
 import MenuIcon from '@mui/icons-material/Menu';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function App() {
 	return (
@@ -21,7 +23,28 @@ function App() {
 				</div>
 				<div className="todos-container">
 					<div className="todo-item-container">
-						<p>item 1</p>
+						<div className="todo-item-container-content">
+							<input type="checkbox" />
+							<p>item 1</p>
+						</div>
+						<div className="todo-item-container-action">
+							<EditIcon
+								sx={{ color: 'warning.light', marginRight: '10px' }}
+								cursor="pointer"
+								onClick={() => {
+									console.log('edit button pressed');
+								}}
+								size={16}
+							/>
+							<DeleteIcon
+								color="error"
+								cursor="pointer"
+								onClick={() => {
+									console.log('delete button pressed');
+								}}
+								size={16}
+							/>
+						</div>
 					</div>
 				</div>
 			</main>

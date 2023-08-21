@@ -42,7 +42,22 @@ main {
 }
 
 .todo-item-container {
-  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
+  flex-direction: row;
   background-color: #F8F0E5;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.todo-item-container-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-item-container-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
