@@ -63,7 +63,7 @@ main {
   flex-direction: row;
 }
 
-.add-todo {
+.add-todo-container {
   display: flex;
   flex: 1;
   flex-direction: row;
