@@ -58,6 +58,21 @@ main {
   flex-direction: row;
 }
 
+.todo-item-container-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-todo {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 0px;
+}
+
 .todo-item-container-action {
   display: flex;
   flex-direction: row;
@@ -70,4 +85,11 @@ main {
   flex-direction: row;
   margin-left: 5px;
   margin-bottom: 1px;
+}
+
+.todo-item-add-textinput {
+  width: 100%;
+  border: 0px;
+  padding: 5px;
+  border-radius: 5px;
 }

@@ -1,9 +1,11 @@
+import AddTodo from "./AddTodo";
 import TodoItem from "./TodoItem";
 
 function Todos() {
 	return (
 		<div className="todos-container">
-      <TodoItem/>
+			<AddTodo/>
+			<TodoItem/>
       <TodoItem/>
 		</div>
 	);
