@@ -1,15 +1,19 @@
 import AddIcon from '@mui/icons-material/Add';
 
 function AddTodo() {
-
 	return (
 		<div className="todo-item-container">
 			<div className="add-todo-container">
-				<input type='text' className='todo-item-add-textinput' placeholder='Add a todo' onKeyDown={(e) => {
-          if (e.key === 'Enter') {
-            console.log('add new todo');
-          }
-        }}/>
+				<input
+					type="text"
+					className="todo-item-add-textinput"
+					placeholder="Add a todo"
+					onKeyDown={(e) => {
+						if (e.key === 'Enter') {
+							console.log('add new todo');
+						}
+					}}
+				/>
 			</div>
 			<div className="todo-item-container-action">
 				<AddIcon
