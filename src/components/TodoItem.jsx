@@ -1,13 +1,17 @@
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-function TodoItem() {
+function TodoItem(props) {
+	const item = props.item;
+	const id = item.id;
+	const todo = item.todo;
+	// const { item, id } = props.item;
 	return (
 		<div className="todo-item-container">
 			<div className="todo-item-container-content">
 				<input type="checkbox" />
 				<div className="todo-item-container-content-text">
-					<p>Do something</p>
+					<p>{todo}</p>
 				</div>
 			</div>
 			<div className="todo-item-container-action">
