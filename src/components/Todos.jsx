@@ -35,7 +35,14 @@ function Todos() {
 
 	return (
 		<div className="todos-container">
-			<AddTodo />
+			<AddTodo
+				onAddTodo={function (newTodo) {
+					console.log('Add new todo');
+					if (newTodo) {
+						todos.push(newTodo);
+					}
+				}}
+			/>
 			{TodosList}
 		</div>
 	);

@@ -1,6 +1,6 @@
 import AddIcon from '@mui/icons-material/Add';
 
-function AddTodo() {
+function AddTodo(props) {
 	return (
 		<div className="todo-item-container">
 			<div className="add-todo-container">
@@ -10,7 +10,7 @@ function AddTodo() {
 					placeholder="Add a todo"
 					onKeyDown={(e) => {
 						if (e.key === 'Enter') {
-							console.log('add new todo');
+							props.onAddTodo();
 						}
 					}}
 				/>
@@ -20,7 +20,7 @@ function AddTodo() {
 					marginRight="10px"
 					cursor="pointer"
 					onClick={() => {
-						console.log('add button pressed');
+						props.onAddTodo();
 					}}
 					size={16}
 				/>
