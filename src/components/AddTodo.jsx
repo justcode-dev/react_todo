@@ -10,7 +10,7 @@ function AddTodo(props) {
 					placeholder="Add a todo"
 					onKeyDown={(e) => {
 						if (e.key === 'Enter') {
-							props.onAddTodo();
+							props.onAddTodo({ id: 1, todo: 'do something '});
 						}
 					}}
 				/>
@@ -20,7 +20,7 @@ function AddTodo(props) {
 					marginRight="10px"
 					cursor="pointer"
 					onClick={() => {
-						props.onAddTodo();
+						props.onAddTodo({ id: 1, todo: 'do something '});
 					}}
 					size={16}
 				/>

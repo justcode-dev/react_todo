@@ -39,7 +39,9 @@ function Todos() {
 				onAddTodo={function (newTodo) {
 					console.log('Add new todo');
 					if (newTodo) {
+						console.log(newTodo)
 						todos.push(newTodo);
+						console.log(todos)
 					}
 				}}
 			/>
