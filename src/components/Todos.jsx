@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import AddTodo from './AddTodo';
 import TodoItem from './TodoItem';
 
@@ -18,13 +19,7 @@ function NoTodosMessage() {
 }
 
 function Todos() {
-	// create mock dataF
-	// const todos = [
-	// 	{ id: 1, todo: 'Feed the dog' },
-	// 	{ id: 2, todo: 'Wash dishes' },
-	// 	{ id: 3, todo: 'Cook breakfast' },
-	// ];
-	const todos = [];
+	const [todos, setTodos] = useState([]);
 
 	const TodosList =
 		todos.length > 0 ? (
@@ -39,9 +34,8 @@ function Todos() {
 				onAddTodo={function (newTodo) {
 					console.log('Add new todo');
 					if (newTodo) {
-						console.log(newTodo)
-						todos.push(newTodo);
-						console.log(todos)
+						console.log(newTodo);
+						setTodos([...todos, newTodo]);
 					}
 				}}
 			/>
