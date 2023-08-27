@@ -4,9 +4,10 @@ import { useState } from 'react';
 const generateID = () => {
 	const characters =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	const generateCharacter = () => characters[(Math.floor(Math.random() * characters.length)) - 1];
-	const generateRandomNumber = () => Math.floor(Math.random() * 1000)
-	return (generateCharacter() + generateRandomNumber());
+	const generateCharacter = () =>
+		characters[Math.floor(Math.random() * characters.length) - 1];
+	const generateRandomNumber = () => Math.floor(Math.random() * 1000);
+	return generateCharacter() + generateRandomNumber();
 };
 
 function AddTodo(props) {
@@ -17,9 +18,11 @@ function AddTodo(props) {
 	};
 
 	const handleAddTodo = () => {
-		props.onAddTodo({ id: generateID(), todo });
-		setTodo('');
-	}
+		if (todo.length > 0) {
+			props.onAddTodo({ id: generateID(), todo });
+			setTodo('');
+		}
+	};
 
 	return (
 		<div className="todo-item-container">

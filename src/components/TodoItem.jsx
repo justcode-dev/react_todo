@@ -19,15 +19,18 @@ function TodoItem(props) {
 	};
 
 	const handleUpdateTodo = () => {
-		props.onUpdateTodo({
-			id,
-			todo: newTodo,
-		});
-		setInEditMode(false);
+		if (newTodo.length > 0) {
+			props.onUpdateTodo({
+				id,
+				todo: newTodo,
+			});
+			setInEditMode(false);
+		}
 	};
 
 	const handleCancelUpdate = () => {
 		setInEditMode(false);
+		setNewTodo(todo);
 	};
 
 	const handleOnChecked = (e) => {
