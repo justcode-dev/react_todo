@@ -16,7 +16,7 @@ function TodoItem(props) {
 			</div>
 			<div className="todo-item-container-action">
 				<EditIcon
-					sx={{ color: 'warning.light', marginRight: '10px' }}
+					sx={{ color: 'warning.light' }}
 					cursor="pointer"
 					onClick={() => {
 						console.log('edit button pressed');
