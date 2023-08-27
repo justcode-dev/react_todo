@@ -27,7 +27,7 @@ function TodoItem(props) {
 					color="error"
 					cursor="pointer"
 					onClick={() => {
-						console.log('delete button pressed');
+						props.onDeleteTodo(id)
 					}}
 					size={16}
 				/>
