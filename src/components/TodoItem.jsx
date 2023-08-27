@@ -12,6 +12,7 @@ function TodoItem(props) {
 
 	const [inEditMode, setInEditMode] = useState(false);
 	const [newTodo, setNewTodo] = useState(todo);
+	const [isChecked, setIsChecked] = useState(false);
 
 	const handleChange = (e) => {
 		setNewTodo(e.target.value);
@@ -27,6 +28,10 @@ function TodoItem(props) {
 
 	const handleCancelUpdate = () => {
 		setInEditMode(false);
+	};
+
+	const handleOnChecked = (e) => {
+		setIsChecked(e.target.checked);
 	};
 
 	return (
@@ -50,14 +55,16 @@ function TodoItem(props) {
 				</div>
 			) : (
 				<div className="todo-item-container-content">
-					<input type="checkbox" />
+					<input type="checkbox" value={isChecked} onChange={handleOnChecked} />
 					<div
 						className="todo-item-container-content-text"
 						onClick={() => {
 							setInEditMode(true);
 						}}
 					>
-						<p>{todo}</p>
+						<p style={{ textDecoration: isChecked ? 'line-through' : 'none' }}>
+							{todo}
+						</p>
 					</div>
 				</div>
 			)}
